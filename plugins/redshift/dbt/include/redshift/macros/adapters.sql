@@ -80,7 +80,7 @@
           numeric_precision,
           numeric_scale
 
-        from {{ relation.information_schema('columns') }}
+        from {{ relation.information_schema('columns', quote=true) }}
         where table_name = '{{ relation.identifier }}'
     ),
 

@@ -149,7 +149,7 @@ class BaseRelation(APIObject):
 
         return self.incorporate(include_policy=policy)
 
-    def information_schema(self, identifier=None):
+    def information_schema(self, identifier=None, quote=False):
         include_db = self.database is not None
         include_policy = filter_null_values({
             'database': include_db,
@@ -158,8 +158,8 @@ class BaseRelation(APIObject):
         })
         quote_policy = filter_null_values({
             'database': self.quote_policy['database'],
-            'schema': False,
-            'identifier': False,
+            'schema': quote,
+            'identifier': quote,
         })
 
         path_update = {
