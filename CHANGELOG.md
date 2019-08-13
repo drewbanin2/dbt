@@ -27,6 +27,9 @@ This is primarily a bugfix release which contains a few minor improvements too. 
  - Fix for creation of user cookies in incorrect directories when `--profile-dir` or `$DBT_PROFILES_DIR` is provided ([#1645](https://github.com/fishtown-analytics/dbt/issues/1645), [#1656](https://github.com/fishtown-analytics/dbt/pull/1656))
  - Fix for error handling when transactions are being rolled back ([#1647](https://github.com/fishtown-analytics/dbt/pull/1647))
  - Fix for incorrect references to `dbt.exceptions` in jinja code ([#1569](https://github.com/fishtown-analytics/dbt/issues/1569), [#1609](https://github.com/fishtown-analytics/dbt/pull/1609))
+ - Fix for duplicated schema creation due to case-sensitive comparison ([#1651](https://github.com/fishtown-analytics/dbt/issues/1651), [#1663](https://github.com/fishtown-analytics/dbt/pull/1663))
+ - Fix for "schema stub" created automatically by dbt ([#913](https://github.com/fishtown-analytics/dbt/issues/913), [#1663](https://github.com/fishtown-analytics/dbt/pull/1663))
+ - Fix for incremental merge query on old versions of postgres (<=9.6) ([#1665](https://github.com/fishtown-analytics/dbt/issues/1665), [#1666](https://github.com/fishtown-analytics/dbt/pull/1666))
  
  ### Contributors:
 Thanks for your contributions to dbt!
@@ -34,6 +37,7 @@ Thanks for your contributions to dbt!
 - [@levimalott](https://github.com/levimalott) ([#1647](https://github.com/fishtown-analytics/dbt/pull/1647))
 - [@aminamos](https://github.com/aminamos) ([#1609](https://github.com/fishtown-analytics/dbt/pull/1609))
 - [@elexisvenator](https://github.com/elexisvenator) ([#1540](https://github.com/fishtown-analytics/dbt/pull/1540))
+- [@edmundyan](https://github.com/edmundyan) ([#1663](https://github.com/fishtown-analytics/dbt/pull/1663))
 
 
 ## dbt 0.14.0 - Wilt Chamberlain (July 10, 2019)
